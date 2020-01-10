@@ -5,9 +5,12 @@ Usage:
 1. Edit settings file: 
 
 * container_name: the docker container name; 
-   * auth_required: 
-     a. Can be left empty and removed, if that, no password will there be when connecting to webproxy;
-     b. If configured, the format for them should be "\<user1>:\<pass1> \<user2>:\<pass2> ..."
+
+* auth_required: 
+
+  a. Can be left empty and removed, if that, no password will there be when connecting to webproxy;
+  
+  b. If configured, the format for them should be "\<user1>:\<pass1> \<user2>:\<pass2> ..."
 
 2. Run run_webproxy.sh to start docker container
 
