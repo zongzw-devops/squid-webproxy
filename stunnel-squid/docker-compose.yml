@@ -1,0 +1,18 @@
+version: "3"
+services:
+  squid:
+    image: stunnel-squid:latest
+    build: .
+    volumes:
+     - $cdir/squid.conf:/etc/squid/squid.conf
+     - $cdir/stunnel.pem:/etc/stunnel/stunnel.pem
+     - $cdir/stunnel.conf:/etc/stunnel/stunnel.conf
+     - $cdir/stunnel4:/etc/default/stunnel4
+     - $cdir/squid.passwd:/etc/squid/squid.passwd
+    ports:
+     - 3128:3128
+     - 3127:3127
+    entrypoint:
+     - bash
+     - -c
+     - service squid start && service stunnel4 start && while true; do sleep 1; done
