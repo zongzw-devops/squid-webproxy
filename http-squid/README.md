@@ -16,4 +16,4 @@ Usage:
 
 3. Configure your web browser to use this http proxy.
 
-Note: if 'htpasswd' command not found, try installing httpd or apache2. 
+Note: if 'htpasswd' command not found, try installing httpd-tools: `yum install httpd-tools`.
